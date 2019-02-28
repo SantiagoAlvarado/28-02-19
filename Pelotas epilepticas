@@ -37,10 +37,13 @@ class Ball {
     this.tam = 50;
     this.velx = 10;
     this.vely = 10;
+    this.red = random(0, 255);
+    this.green = random(0, 255);
+    this.blue = random(0, 255);
 
   }
   mostrar() {
-    fill(random(255),random(255),random(255));
+    fill(this.red, this.blue, this.green);
     ellipse(this.x, this.y, this.tam, this.tam);
   }
   moverx() {
@@ -57,6 +60,10 @@ class Ball {
   }
   botarx() {
     this.velx = this.velx * -1
+    this.red = random(0, 255);
+    this.green = random(0, 255);
+    this.blue = random(0, 255);
+
   }
   movery() {
     this.y = this.y + this.vely;
